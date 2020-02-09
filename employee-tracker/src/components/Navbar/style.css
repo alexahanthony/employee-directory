@@ -1,0 +1,19 @@
+nav.navbar.navbar-default {
+    margin-bottom: 0;
+    text-align: center;
+    background-color: pink;
+    color: grey;
+  }
+
+  .navbar-brand {
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .navbar {
+    background-color: rgb(255, 200, 21);
+    color: grey;
+  }

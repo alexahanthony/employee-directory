@@ -1,0 +1,23 @@
+.footer {
+    min-height: 100px;
+    background-color: rgb(255, 200, 21);
+    position: relative;
+    color: black;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4em;
+  }
+  
+  .footer span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 1%;
+    background-color: rgb(255, 200, 21);
+    color: black;
+  }
+  
