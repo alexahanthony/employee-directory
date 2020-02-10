@@ -1,3 +1,30 @@
 ul.search-results img {
     margin: 0 auto;
   }
+#col-image {
+padding: 20pt;
+}
+
+#col-name {
+  padding: 20pt;
+}
+
+#col-phone {
+  padding: 20pt;
+}
+
+#col-email {
+  padding: 20pt;
+}
+
+#col-dob {
+  padding: 20pt;
+}
+
+th {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+td {
+  font-family: 'Courier New', Courier, monospace;
+}

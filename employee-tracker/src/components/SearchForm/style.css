@@ -1,9 +1,12 @@
 form.search {
     overflow: auto;
     margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
   }
   
   form.search button[type="submit"] {
     float: right;
     margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
   }

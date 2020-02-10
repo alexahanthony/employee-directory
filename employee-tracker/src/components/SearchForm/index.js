@@ -6,7 +6,7 @@ function SearchForm(props) {
   return (
     <form className="search">
       <div className="form-group">
-        <label htmlFor="results">User Name:</label>
+        <label htmlFor="results"><strong>Username:</strong></label>
         <input
           value={props.search}
           onChange={props.handleInputChange}
@@ -22,8 +22,8 @@ function SearchForm(props) {
             <option value={results} key={results} />
           ))}
         </datalist>
-        <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
-          Search
+        <button type="submit" onClick={props.handleFormSubmit} className="btn btn-dark">
+          <strong>Search</strong>
         </button>
       </div>
     </form>
