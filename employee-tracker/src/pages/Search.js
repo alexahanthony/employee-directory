@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 // import Form from "../components/Form"
-import Container from "../components/Container";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
 
@@ -9,7 +8,8 @@ class Search extends Component {
   state = {
     search: "",
     results: [],
-    error: ""
+    error: "",
+    myResults: []
   };
 
 
@@ -19,25 +19,27 @@ class Search extends Component {
 
   componentDidMount() {
     API.getRandomUser()
-      .then(res => this.setState({ results: res.data.results }))
+      .then(res => this.setState({ myResults: res.data.results, results: res.data.results }))
       .catch(err => console.log(err));
   }
 
   handleFormSubmit = event => {
     event.preventDefault();
-    API.getRandomUser(this.state.search)
-      .then(res => {
-        if (res.data.status === "error") {
-          throw new Error(res.data.results);
-        }
-        this.setState({ results: res.data.results, error: "" });
-      })
-      .catch(err => this.setState({ error: err.message }));
+    let myResults = this.state.myResults.filter(obj => {
+        return obj.name.first === this.state.search})
+      this.setState({ results: myResults})
+      if(this.state.search === '') {
+        this.setState({results: this.state.myResults})
+      }
+      console.log(this.state.myResults)
+      console.log(this.state.search)
+
+    
   };
   render() {
     return (
       <div>
-        <Container style={{ minHeight: "80%" }}>
+        
           <br />
           <SearchForm
             handleFormSubmit={this.handleFormSubmit}
@@ -45,7 +47,7 @@ class Search extends Component {
             results={this.state.results}
           />
           <SearchResults results={this.state.results} />
-        </Container>
+        
       </div>
     );
   }

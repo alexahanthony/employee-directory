@@ -12,10 +12,10 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <Wrapper>
+       <Wrapper>
           <Route exact path="/" component={Search} />
           <Route exact path="/search" component={Search} />
-        </Wrapper>
+          </Wrapper>
         <Footer />
       </div>
     </Router>
